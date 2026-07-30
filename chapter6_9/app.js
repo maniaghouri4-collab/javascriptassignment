@@ -12,12 +12,14 @@ document.write("Now the value of a is: " + a + "<br><br>");
 document.write("The value of --a is: " + (--a) + "<br>");
 document.write("Now the value of a is: " + a + "<br><br>");
 
-ocument.write("The value of a-- is: " + (a--) + "<br>");
+document.write("The value of a-- is: " + (a--) + "<br>");
 document.write("Now the value of a is: " + a + "<br>");
 
 // QUESTION NO 2
 var a = 2, b = 1;
 var result = --a - --b + ++b + b--;
+
+document.write("--a is " )
 document.write("a is: " + a + "<br>");  
 document.write("b is: " + b + "<br>");     
 document.write("result is: " + result);
@@ -43,28 +45,87 @@ document.write(num + " x 9 = " + (num * 9) + "<br>");
 document.write(num + " x 10 = " + (num * 10) + "<br>");
 
 // QUESTION NO 5
+// A
 var subject1 = prompt("Enter first subject name:", "English");
 var subject2 = prompt("Enter second subject name:", "Math");
 var subject3 = prompt("Enter third subject name:", "Urdu");
-
+// B
+var totalMarksPerSubject = 100;
+// C
 var marks1 = Number(prompt("Enter obtained marks for " + subject1 + ":"));
+// D
 var marks2 = Number(prompt("Enter obtained marks for " + subject2 + ":"));
 var marks3 = Number(prompt("Enter obtained marks for " + subject3 + ":"));
-
+// E
 var percentage1 = (marks1 / totalMarksPerSubject) * 100;
 var percentage2 = (marks2 / totalMarksPerSubject) * 100;
 var percentage3 = (marks3 / totalMarksPerSubject) * 100;
-
+var totalObtainedMarks = marks1 + marks2 + marks3;
 var grandTotalMarks = totalMarksPerSubject * 3; 
 var totalObtainedMarks = marks1 + marks2 + marks3;
 var overallPercentage = (totalObtainedMarks / grandTotalMarks) * 100;
 
-ocument.write("<h1>Marks Sheet</h1>");
+document.write("<table cellspacing='0' cellpadding='8'>");
 
-document.write(subject1 + ": " + marks1 + " / " + totalMarksPerSubject + " (Percentage: " + percentage1 + "%)<br>");
-document.write(subject2 + ": " + marks2 + " / " + totalMarksPerSubject + " (Percentage: " + percentage2 + "%)<br>");
-document.write(subject3 + ": " + marks3 + " / " + totalMarksPerSubject + " (Percentage: " + percentage3 + "%)<br><br>");
+// Table Header Row
+document.write("<tr>");
+document.write("<th>Subject</th>");
+document.write("<th>Total Marks</th>");
+document.write("<th>Obtained Marks</th>");
+document.write("<th>Percentage</th>");
+document.write("</tr>");
 
-document.write("<b>Total Marks: " + grandTotalMarks + "</b><br>");
-document.write("<b>Obtained Marks: " + totalObtainedMarks + "</b><br>");
-document.write("<b>Overall Percentage: " + overallPercentage + "%</b>");
+// Subject 1 Row
+document.write("<tr>");
+document.write("<td>" + subject1 + "</td>");
+document.write("<td>" + totalMarksPerSubject + "</td>");
+document.write("<td>" + marks1 + "</td>");
+document.write("<td>" + percentage1.toFixed(2) + "%</td>");
+document.write("</tr>");
+
+// Subject 2 Row
+document.write("<tr>");
+document.write("<td>" + subject2 + "</td>");
+document.write("<td>" + totalMarksPerSubject + "</td>");
+document.write("<td>" + marks2 + "</td>");
+document.write("<td>" + percentage2.toFixed(2) + "%</td>");
+document.write("</tr>");
+
+// Subject 3 Row
+document.write("<tr>");
+document.write("<td>" + subject3 + "</td>");
+document.write("<td>" + totalMarksPerSubject + "</td>");
+document.write("<td>" + marks3 + "</td>");
+document.write("<td>" + percentage3.toFixed(2) + "%</td>");
+document.write("</tr>");
+
+// Final Total Row
+document.write("<tr>");
+document.write("<th>Total</th>");
+document.write("<th>" + grandTotalMarks + "</th>");
+document.write("<th>" + totalObtainedMarks + "</th>");
+document.write("<th>" + overallPercentage.toFixed(2) + "%</th>");
+document.write("</tr>");
+
+document.write("</table>");
+
+
+
+
+
+
+
+
+
+
+
+
+// document.write("<h1>Marks Sheet</h1>");
+
+// document.write(subject1 + ": " + marks1 + " / " + totalMarksPerSubject + " (Percentage: " + percentage1 + "%)<br>");
+// document.write(subject2 + ": " + marks2 + " / " + totalMarksPerSubject + " (Percentage: " + percentage2 + "%)<br>");
+// document.write(subject3 + ": " + marks3 + " / " + totalMarksPerSubject + " (Percentage: " + percentage3 + "%)<br><br>");
+
+// document.write("<b>Total Marks: " + grandTotalMarks + "</b><br>");
+// document.write("<b>Obtained Marks: " + totalObtainedMarks + "</b><br>");
+// document.write("<b>Overall Percentage: " + overallPercentage + "%</b>");
