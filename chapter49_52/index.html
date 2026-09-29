@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="bootstrap.js">
+</head>
+<body>
+    
+<!-- <form action=""     onsubmit="data(event)">
+Name: <input type="text"   id="name"><br>
+Email: <input type="email"   id="email"><br>
+<button  type="submit">subbmit</button>
+</form>
+<h3  id="result"></h3> -->
+
+<!-- anser2 -->
+ <!-- <p>
+    "Success does not come from knowing everything at once; it comes from having the patience to learn step by step. You are someone who values clarity over complexity,<span   id="moretext"  style="display:none;">chooses consistency over shortcuts, and is never afraid to ask questions until every detail makes sense. Keep building your foundation with this focus, because steady effort always turns small steps into great achievements."</span>
+ </p>
+ <button   id="btn"  onclick="togglertext()"   style="border: none;">  Read more</button><br> -->
+
+<!-- anser3 -->
+ <form onsubmit="addstudent(event)">
+    Name: <input type="text" id="name" required><br>
+    Age: <input type="number" id="age" required><br>
+    Class: <input type="text" id="class" required><br>
+    <button type="submit">Add Student</button>
+</form>
+
+<br><hr>
+
+<table border="1" cellpadding="8">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Class</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="tablebody">
+       
+    </tbody>
+</table>
+
+<br><hr>
+
+<div id="editformsection" style="display: none;">
+    <h2>Edit Student</h2>
+    <form onsubmit="updatestudent(event)">
+        Name: <input type="text" id="updatename" required><br>
+        Age: <input type="number" id="updateage" required><br>
+        Class: <input type="text" id="updateclass" required><br>
+        <button type="submit">Update</button>
+    </form>
+</div>
+
+  <script   src="app.js">  </script>
+</body>
+</html>
